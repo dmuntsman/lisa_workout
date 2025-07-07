@@ -1,0 +1,17 @@
+[build]
+  publish = "dist"
+  command = "npm install --legacy-peer-deps && npm run build:web"
+
+[build.environment]
+  NODE_VERSION = "18"
+  EXPO_PUBLIC_BASE_PATH = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  command = "npm run dev"
+  port = 8081
+
